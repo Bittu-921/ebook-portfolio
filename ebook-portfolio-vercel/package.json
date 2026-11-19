@@ -1,0 +1,23 @@
+{
+  "name": "ebook-portfolio",
+  "version": "2.0.0",
+  "private": true,
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "views": "node build-views.js",
+    "client": "esbuild client-src.js --bundle --minify --format=iife --outfile=public/blob-client.js",
+    "build": "node build-views.js"
+  },
+  "engines": {
+    "node": "22.x"
+  },
+  "dependencies": {
+    "@vercel/blob": "2.9.0",
+    "adm-zip": "^0.5.14",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2"
+  }
+}
